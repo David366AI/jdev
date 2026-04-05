@@ -1,0 +1,9 @@
+<package>
+import java.lang.*;
+import java.applet.*;
+import java.awt.*;
+
+public class <AppletName> extends java.applet.Applet
+{
+  
+}

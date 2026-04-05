@@ -1,0 +1,8 @@
+<package>
+
+import java.lang.*;
+
+public interface <InterfaceName>
+{
+  
+}

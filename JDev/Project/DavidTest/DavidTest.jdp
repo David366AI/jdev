@@ -1,0 +1,15 @@
+<project><name>DavidTest</name><createDateTime>2014-10-09 18:51:40</createDateTime><lastModifiedDateTime>2015-04-06 23:37:10</lastModifiedDateTime><cfg>
+		<classPath></classPath>
+		<mainClassName></mainClassName>
+		<mainClassPackage></mainClassPackage>
+		<parameter></parameter>
+		<author>David</author>
+		<version>1.0</version>
+	</cfg><projectType>0</projectType><package>
+		<pack>
+			<name></name>
+			<file>
+				<name>TestMain.java</name>
+			</file>
+		</pack>
+	</package></project>

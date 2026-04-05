@@ -1,0 +1,11 @@
+Signature Version 1.0
+
+
+Name:	com/tsd/common/util/GenerateSerials.java
+Java-Bean:	False
+Digest-Algorithms:	SHA, MD5
+SHA-Digest:	KOxWah40Q9IolFAvLPEuRYzYFB0=
+MD5-Digest:	1zgMQgRk8xkXD9pzJUZjKg==
+
+Name:	com/tsd/common/util
+Sealed:	False

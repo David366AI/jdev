@@ -1,0 +1,5 @@
+package gsh;
+
+class GSH
+{
+}

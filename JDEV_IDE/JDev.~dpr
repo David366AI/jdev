@@ -1,0 +1,109 @@
+program JDev;
+
+
+
+{%File 'bin\MsgCfg'}
+
+uses
+  windows,
+  dialogs,
+  ScktComp,
+  Forms,
+  ideUnit in 'ideUnit.pas' {IDEFrm},
+  MsgUnit in 'MsgUnit.pas' {MsgFrm},
+  WorkSpaceUnit in 'WorkSpaceUnit.pas' {WorkSpaceFrm},
+  ClassBrowserUnit in 'ClassBrowserUnit.pas' {ClassBrowserFrm},
+  selectFileTypeDlg in 'selectFileTypeDlg.pas' {newFileFrm},
+  uCommandData in 'uCommandData.pas' {commandDataDM: TDataModule},
+  frmEditor in 'frmEditor.pas' {EditorForm},
+  dlgSearchText in 'dlgSearchText.pas' {TextSearchDialog},
+  dlgReplaceText in 'dlgReplaceText.pas' {TextReplaceDialog},
+  dlgConfirmReplace in 'dlgConfirmReplace.pas' {ConfirmReplaceDialog},
+  dmCommands in 'dmCommands.pas' {CommandsDataModule: TDataModule},
+  uHighlighterProcs in 'uHighlighterProcs.pas',
+  projectProperty in 'projectProperty.pas' {projectPropertyFrm},
+  selectPath in 'selectPath.pas' {selectPathDlg},
+  ClassBrowser in 'ClassBrowser.pas',
+  DTestPrintPreview in 'DTestPrintPreview.pas' {TestPrintPreviewDlg},
+  MoveFileUnit in 'MoveFileUnit.pas' {MoveFileForm},
+  progressUnit in 'progressUnit.pas' {ProgressFrm},
+  WaitAppEndThread in '..\JDEV_DEBUG\WaitAppEndThread.pas',
+  Common in '..\JDEV_DEBUG\Common.pas',
+  ConstVar in '..\JDEV_DEBUG\ConstVar.pas',
+  CreateApp in '..\JDEV_DEBUG\CreateApp.pas' {createAppDlg},
+  CreateApplet in '..\JDEV_DEBUG\CreateApplet.pas' {appletForm},
+  DataInfo in '..\JDEV_DEBUG\DataInfo.pas',
+  debugunit in '..\JDEV_DEBUG\debugunit.pas' {DebugForm},
+  methodBp in '..\JDEV_DEBUG\methodBp.pas' {addMethodBpForm},
+  ReadOutput in '..\JDEV_DEBUG\Readoutput.pas',
+  changVarName in '..\JDEV_DEBUG\changVarName.pas' {changeVarForm},
+  setPath in '..\JDEV_DEBUG\setPath.pas' {setSourcePathDlg},
+  ReadRunOutUnit in 'ReadRunOutUnit.pas',
+  PGMRX120Lib_TLB in 'D:\delphi6\Imports\PGMRX120Lib_TLB.pas',
+  jdkHelpUnit in 'jdkHelpUnit.pas' {jdkHelpFrm},
+  splashUnit in 'splashUnit.pas' {splashFrm},
+  importProjectUnit in 'importProjectUnit.pas' {importProjectFrm},
+  versionUnit in 'versionUnit.pas' {generateJarFrm},
+  createAppletUnit in 'createAppletUnit.pas' {createAppletFrm},
+  runParamSetupUnit in 'runParamSetupUnit.pas' {RunParamSetupDlg},
+  EnvUnit in 'EnvUnit.pas' {EnvSetupForm},
+  aboutUnit in 'aboutUnit.pas' {aboutDlg},
+  createProperty in 'createProperty.pas' {createPropertyForm},
+  createMethod in 'createMethod.pas' {createMethodForm},
+  addParamUnit in 'addParamUnit.pas' {addParamForm},
+  Encrypt in 'Encrypt.pas',
+  registerUnit in 'registerUnit.pas' {regForm},
+  parseExp in 'parseExp.pas';
+
+{$R *.res}
+var
+  Found:HWND;
+  g_splashFrm: TsplashFrm;
+
+begin
+  Application.Initialize;
+  {
+    检测是否已经启动了一个实例，如果已经启动，则发送一个消息（消息中包含参数），原实例
+    接收到该消息后，作newProject处理；
+    如果没有启动，往下执行。
+  }
+  Found:=FindWindow(nil, APPLICATION_TITLE);
+
+  if Found <> 0 then
+  begin
+    if ParamCount > 0 then
+      sendMessageTo(HWND_BROADCAST,paramStr(1));
+    ShowWindow(Found,SW_SHOW);
+    ShowWindow( Found, SW_RESTORE );
+    BringWindowToTop( Found );
+    SetForegroundWindow( Found );
+    halt;
+  end;
+  try
+    g_splashFrm:= TsplashFrm.Create(nil);
+    g_splashFrm.Show;
+    g_splashFrm.Update;
+
+    Application.Title := 'JDev ide';
+    Application.CreateForm(TIDEFrm, IDEFrm);
+    Application.CreateForm(TDebugForm, DebugForm);
+    Application.CreateForm(TselectPathDlg, selectPathDlg);
+    Application.CreateForm(TTestPrintPreviewDlg, TestPrintPreviewDlg);
+    Application.CreateForm(TMoveFileForm, MoveFileForm);
+    Application.CreateForm(TProgressFrm, ProgressFrm);
+    Application.CreateForm(TaddMethodBpForm, addMethodBpForm);
+    Application.CreateForm(TchangeVarForm, changeVarForm);
+    Application.CreateForm(TsetSourcePathDlg, setSourcePathDlg);
+    Application.CreateForm(TRunParamSetupDlg, RunParamSetupDlg);
+    Application.CreateForm(TEnvSetupForm, EnvSetupForm);
+    Application.CreateForm(TaboutDlg, aboutDlg);
+
+    splashFrm.close;
+    splashFrm.Free;
+    IDEFrm.Visible:=true;
+    
+    Application.Run;
+  except
+    ;
+  end;
+end.

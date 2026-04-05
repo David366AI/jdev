@@ -1,0 +1,29 @@
+program jdev;
+
+uses
+  Forms,
+  debugunit in 'debugunit.pas' {DebugForm},
+  CreateApp in 'CreateApp.pas' {createAppDlg},
+  DataInfo in 'DataInfo.pas',
+  Readoutput in 'Readoutput.pas',
+  Common in 'Common.pas',
+  WaitAppEndThread in 'WaitAppEndThread.pas',
+  ConstVar in 'ConstVar.pas',
+  setPath in 'setPath.pas' {setSourcePathDlg},
+  selectPath in 'selectPath.pas' {selectPathDlg},
+  changVarName in 'changVarName.pas' {changeVarForm},
+  methodBp in 'methodBp.pas' {addMethodBpForm},
+  CreateApplet in 'CreateApplet.pas' {appletForm};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.Title := 'java µ÷ÊÔ¿ØÖÆÌ¨';
+  Application.CreateForm(TDebugForm, DebugForm);
+  Application.CreateForm(TsetSourcePathDlg, setSourcePathDlg);
+  Application.CreateForm(TselectPathDlg, selectPathDlg);
+  Application.CreateForm(TchangeVarForm, changeVarForm);
+  Application.CreateForm(TaddMethodBpForm, addMethodBpForm);
+  Application.Run;
+end.

@@ -1,0 +1,21 @@
+Signature Version 1.0
+
+
+Name:	DumpData.java
+Java-Bean:	False
+Digest-Algorithms:	SHA, MD5
+SHA-Digest:	wJGEXSIlGrcckgYSi3v8mS7I2gU=
+MD5-Digest:	f4tGzQUYbkLyIoNiOKVQ5A==
+
+Name:	d:\vaj\ide\project_resources\test\db.cfg
+Java-Bean:	False
+Digest-Algorithms:	SHA, MD5
+SHA-Digest:	m4JX3fdufJPepzbGuTioUeYNUio=
+MD5-Digest:	E2Y7UgnnBPYNtUBV/d/vVQ==
+
+Name:	d:\vaj\ide\project_resources\test\table.ini
+Java-Bean:	False
+Digest-Algorithms:	SHA, MD5
+SHA-Digest:	Va+39j7pLjn4JpuCZWXSJ1k8ex0=
+MD5-Digest:	rpqwzkb5EzuWuA0aIztp0w==
+

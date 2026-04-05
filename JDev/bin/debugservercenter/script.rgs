@@ -1,0 +1,10 @@
+#
+# Automatically generated script for RetroGuard bytecode obfuscator.
+# To be used with Java JAR-file: F:\jdev\JDEV_IDE\bin\debugservercenter\debugServer1.jar
+# 2003-7-11 9:38:44
+#
+.class com/jdev/common/debug/server/DebugServerCenter public 
+.class AnalysisClass  public
+.class CheckClassGrammer  public
+.class com/jdev/parser/*  
+

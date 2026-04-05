@@ -1,0 +1,15 @@
+<project><name>SecondProject</name><createDateTime>2003-06-21 21:46:45</createDateTime><lastModifiedDateTime>2004-03-14 22:03:03</lastModifiedDateTime><cfg>
+		<classPath>.;</classPath>
+		<mainClassName>Main</mainClassName>
+		<mainClassPackage></mainClassPackage>
+		<parameter>hello no </parameter>
+		<author>gsh</author>
+		<version>1.0</version>
+	</cfg><projectType>0</projectType><package>
+		<pack>
+			<name></name>
+			<file>
+				<name>Main.java</name>
+			</file>
+		</pack>
+	</package></project>
