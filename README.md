@@ -13,13 +13,9 @@ JDev IDE was developped by me from 2002 to 2004. It is a shareware software.
 4. Double click [Test.java], press F9 to debug
 
 ## Demo
-<video controls width="800" src="https://drive.google.com/file/d/0B7eNZuNtUvcCZkhLSFAybGRqdkk/view?resourcekey=0-9khXjVkRrgzVMWZJUH9ukQ">
-  Your browser does not support the video tag.
-</video>
 
-
-![JDev](https://drive.google.com/file/d/0B7eNZuNtUvcCZkhLSFAybGRqdkk/view?resourcekey=0-9khXjVkRrgzVMWZJUH9ukQ)
-
+![JDev](./JDev/bin/jdev.jpg)
+[![Click to watch the video](./JDev/bin/jdev.jpg)](https://drive.google.com/file/d/0B7eNZuNtUvcCZkhLSFAybGRqdkk/view?usp=drive_link&resourcekey=0-9khXjVkRrgzVMWZJUH9ukQ)
 
 下面是Visual JDev 1.0 的主要功能列表：
 
