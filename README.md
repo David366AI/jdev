@@ -13,7 +13,7 @@ JDev IDE was developped by me from 2002 to 2004. It is a shareware software.
 4. Double click [Test.java], press F9 to debug
 
 ## Demo
-<video controls width="800" src="./jdev-video.mp4">
+<video controls width="800" src="https://drive.google.com/file/d/0B7eNZuNtUvcCZkhLSFAybGRqdkk/view?resourcekey=0-9khXjVkRrgzVMWZJUH9ukQ">
   Your browser does not support the video tag.
 </video>
 
