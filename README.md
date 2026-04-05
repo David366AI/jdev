@@ -14,7 +14,6 @@ JDev IDE was developped by me from 2002 to 2004. It is a shareware software.
 
 ## Demo
 
-![JDev](./JDev/bin/jdev.jpg)
 [![Click to watch the video](./JDev/bin/jdev.jpg)](https://drive.google.com/file/d/0B7eNZuNtUvcCZkhLSFAybGRqdkk/view?usp=drive_link&resourcekey=0-9khXjVkRrgzVMWZJUH9ukQ)
 
 下面是Visual JDev 1.0 的主要功能列表：
